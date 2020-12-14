@@ -1,14 +1,16 @@
-# Java Demonstration Scripts
+# Java Demonstration Code for Sauce Labs
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/564ddfb012db40048781b7b6c954d099)](https://app.codacy.com/gh/saucelabs-training/demo-java?utm_source=github.com&utm_medium=referral&utm_content=saucelabs-training/demo-java&utm_campaign=Badge_Grade_Dashboard)
 [![CircleCI](https://circleci.com/gh/saucelabs-training/demo-java/tree/master.svg?style=svg)](https://circleci.com/gh/saucelabs-training/demo-java/tree/master)
 ![Front-end performance](https://github.com/saucelabs-training/demo-java/workflows/Front-end%20performance/badge.svg)
 
-The demo scripts in [this repository](https://github.com/saucelabs-training/demo-java) allow you to run simple automated tests in order to validate your Java Selenium environment and your [saucelabs.com](https://app.saucelabs.com/login) account credentials.
+This is a monorepo of various examples and tutorials for how to run simple test automation code on [saucelabs.com](https://app.saucelabs.com/login).
 
 > ###### Disclaimer:
 >
-> The code in these scripts is provided on an "AS-IS" basis without warranty of any kind, either express or implied, including without limitation any implied warranties of condition, uninterrupted use, merchantability, fitness for a particular purpose, or non-infringement. These scripts are provided for educational and demonstration purposes only, and should not be used in production. Issues regarding these scripts should be submitted through GitHub. These scripts are maintained by the Technical Services team at Sauce Labs.
+> This code is provided on an "AS-IS" basis without warranty of any kind, either express or implied, including without limitation any implied warranties of condition, uninterrupted use, merchantability, fitness for a particular purpose, or non-infringement. 
+> This code is provided for educational and demonstration purposes only, and should not be used in production. Issues regarding this code should be submitted through GitHub. 
+> This code is maintained by the Technical Services team at Sauce Labs.
 >
 > Some examples in this repository, such as `appium-example`, `parallel-testing`, and `headless`, may require a different account tier beyond free trial. Please contact the [Sauce Labs Sales Team](https://saucelabs.com/contact) for support and information.
 
@@ -69,9 +71,18 @@ The demo scripts in [this repository](https://github.com/saucelabs-training/demo
 
 1. Create a directory on your machine.
 2. Clone this repository into said directory.
-    ```
+    You can use grab the entire repository:
+   ```shell script
     $ git clone https://github.com/saucelabs-training/demo-java.git
     ```
+   or you can select only the specific directory you are interested in working with:
+   ```shell script
+   git clone https://github.com/saucelabs-training/demo-java.git --filter=blob:none --no-checkout
+   cd demo-java
+   git sparse-checkout set selenium-examples/junit
+   cd selenium-examples/junit/
+   ``` 
+
 2. Import the project into your IntelliJ (or IDE of your choice) as a **Maven Project**.
 3. Click through the prompts, and confirm when it asks to **Import from Sources**
 4. Choose the **demo-java** directory as the **root** directory of the project.
