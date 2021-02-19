@@ -55,14 +55,16 @@ public class SwagLabsTest{
         String SAUCE_REMOTE_URL = "https://" + username + ":" + accesskey + sauceUrl +"/wd/hub";
         URL url = new URL(SAUCE_REMOTE_URL);
 
-        String appName ="sample-app-android.apk";
         MutableCapabilities capabilities = new MutableCapabilities();
         capabilities.setCapability("deviceName", "Android Emulator");
         capabilities.setCapability("platformVersion", "8.0");
         capabilities.setCapability("platformName", "Android");
         capabilities.setCapability("automationName", "UiAutomator2");
         capabilities.setCapability("name", methodName);
-        capabilities.setCapability("app", "sauce-storage:" + appName);
+        //      You can use  storage:filename=" +appName if you uploaded your app to Saucd Storage
+//        capabilities.setCapability("app", "storage:filename=" +appName);
+        capabilities.setCapability("app", "https://github.com/saucelabs/sample-app-mobile/releases/download/2.7.1/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk");
+
         capabilities.setCapability("appWaitActivity", "com.swaglabsmobileapp.MainActivity");
 
 
